@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <title>Weather API Card</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0%;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url(./day/wallpaper.avif);
+        /* background-attachment:fixed; */
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .weather-card {
+        width: 250px;
+        height: 500px;
+        /* background-color: #aecadb; */
+        background-image: linear-gradient(to bottom right, rgb(173, 230, 231), rgb(18, 74, 92));
+        border-radius: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        border: 8px solid black;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .weather-info {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 20px;
+        font-size: 17px;
+
+        /* border: 1px solid red; */
+    }
+
+    input {
+        width: 100px;
+        border: none;
+        border-radius: 8px;
+        padding: 0 7px;
+        background-color: #ffffff;
+    }
+
+    .comp {
+        height: 70px;
+        width: 80px;
+        /* background-color: rgb(255, 255, 255); */
+        background-image: linear-gradient(rgb(255, 255, 255), rgb(58, 56, 56));
+        box-shadow: 0px 0px 15px rgb(133, 132, 132);
+        border-radius: 5px;
+        margin: 3px;
+        font-weight: 550;
+        padding-top: 12px;
+        font-size: 14px;
+
+    }
+
+    .img {
+        height: 150px;
+        width: 150px;
+        /* border: 1px solid red; */
+        margin: auto;
+
+    }
+
+    .temp {
+        font-size: 35px;
+        font-weight: 550;
+    }
+
+    .date {
+        margin-top: 14px;
+        text-align: left;
+        font-size: 12px;
+        font-weight: 550;
+    }
+
+    h1 {
+        margin-top: 15px;
+    }
+</style>
+
+<body>
+    <div class="weather-card" id="wthcard">
+
+        <!-- <button id="btn" onclick="myfun()">search</button> -->
+        <input type="text" id="search">
+        <i class="fa-solid fa-magnifying-glass fa-fade" style="color: #000000;" onclick="myfun()"></i>
+        <h1 style="color: black ;font-size: 17px;">Weather</h1>
+        <h2 id="location">Gabara , EUB</h2>
+
+        <div class="img"><img id="weatherimg" src="./day/sunny.png" alt="" height="100%"></div>
+        <!-- <img src="./day/Haze.png" alt=""> -->
+
+
+        <p id="description" class="desc">Sunny</p>
+        <p id="temperature" class="temp">37°C
+        <p>
+
+        <div class="weather-info">
+
+            <div id="pressure" class="comp">pressure
+                1005 hPa
+
+            </div>
+            <div id="humidity" class="comp">humidity 102%</div>
+            <div id="wind" class="comp">wind <br>3 mi/h</div>
+
+        </div>
+        <p class="date" id="date"></p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
